@@ -82,6 +82,7 @@ extension LandingViewModel:  CLLocationManagerDelegate  {
         guard let location = manager.location?.coordinate else { return }
         self.getLocation(location: location)
         locationManager.stopUpdatingLocation()
+        // Move to a different section as there are a chance of this getting called multiple time, which may cause navigation issues.
         if !isLocationCalled{
             self.isLocationCalled = true
             getWeather()

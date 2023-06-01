@@ -21,7 +21,7 @@ class CityModel {
                if newCity.count > 0 {
                   self?.cities = newCity
                }else {
-                   // If the API fails to fetch the data then we go for backup here which is store in the app
+                   // If the API fails to fetch the data then we go for backup here which is stored within the app
                    self?.getCityFromBackup(compelition: { [weak self] cityListArray in
                        self?.cities = cityListArray
                    })
@@ -43,7 +43,7 @@ class CityModel {
     }
     
     func getCityFromBackup(compelition: @escaping ([CityObject]) -> ()) {
-        
+        // Fetching the data from pre-stored JSON file with the city list
         guard let path = Bundle.main.path(forResource: "city", ofType: "json") else { return }
        
         do {

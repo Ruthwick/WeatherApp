@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     private var animationView: LottieAnimationView?
     private var viewModel = LandingViewModel()
     
-    //MARK: - lyfecycle
+    //MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad() 
         LoadingIndicator.shared.setupLoadingWindowIfNeeded()
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             }))
             self.present(alert, animated: true, completion: nil)
         }
-        
+        // Would like to call the navigation code some where in the navigation controller or in some other place.
         viewModel.loadStartController = {
             guard let controller = self.storyboard?.instantiateViewController(withIdentifier: APPConstants.startViewController) as? StartViewController else { return }
             self.navigationController?.pushViewController(controller, animated: false)

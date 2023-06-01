@@ -20,7 +20,7 @@ class StartViewController: UIViewController{
     //MARK: - vars/lets
     var viewModel = StartViewModel()
     
-    //MARK: - lyfecycle
+    //MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.actualLocation()

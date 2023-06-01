@@ -38,7 +38,7 @@ class WeatherViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     var viewModel = WeatherViewModel() 
 
-    //MARK: - lyfecycle
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.set(true, forKey: keys.firstStart)

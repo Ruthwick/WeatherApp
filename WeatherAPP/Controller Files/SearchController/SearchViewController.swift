@@ -17,7 +17,7 @@ class SearchViewController: UIViewController {
     //MARK: - vars/lets
     var viewModel = SearchViewModel()
     
-    //MARK: - lyfecycle
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()

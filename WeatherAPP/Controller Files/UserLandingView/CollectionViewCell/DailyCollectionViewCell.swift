@@ -14,6 +14,8 @@ class DailyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dailyMaxTemp: UILabel!
     @IBOutlet weak var dailyMinTemp: UILabel!
     
+    // Move the cell to a sperate xib file rather than putting in the collectionview in storyboard
+
     func configure(daily: Daily, indexPath: Int) {
         dailyDate.textColor = .white
         dailyMaxTemp.textColor = .white
