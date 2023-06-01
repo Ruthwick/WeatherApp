@@ -20,7 +20,7 @@ class LocationWeatherManager {
  
     func getCurrentWeather(lat:Double,lon:Double,completion: @escaping (Result<CurrentWeather,NetworkError>) -> Void) {
         LoadingIndicator.shared.show()
-        guard let url = URL(string: "\(APPConstants.baseURL)data/2.5/weather?lat=\(lat)&lon=\(lon)&lang=\(lang)&units=metric&appid=\(APPConstants.appKey)") else {
+        guard let url = URL(string: "\(APPConstants.baseURL)data/2.5/weather?lat=\(lat)&lon=\(lon)&lang=\(lang)&units=imperial&appid=\(APPConstants.appKey)") else {
             LoadingIndicator.shared.hide()
             completion(.failure(.serverError))
             return
@@ -46,7 +46,7 @@ class LocationWeatherManager {
     
     func getDailyWeather(lat:Double,lon:Double, completion: @escaping (Result<DailyWeather,NetworkError>) -> ()) {
         LoadingIndicator.shared.show()
-        guard let url = URL(string: "\(APPConstants.baseURL)data/2.5/onecall?lat=\(lat)&lon=\(lon)&lang=\(lang)&exclude=minutely&units=metric&appid=\(APPConstants.appKey)") else {
+        guard let url = URL(string: "\(APPConstants.baseURL)data/2.5/onecall?lat=\(lat)&lon=\(lon)&lang=\(lang)&exclude=minutely&units=imperial&appid=\(APPConstants.appKey)") else {
             LoadingIndicator.shared.hide()
             completion(.failure(.serverError))
             return
